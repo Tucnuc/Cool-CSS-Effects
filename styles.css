@@ -1,0 +1,77 @@
+/* basic stuff */
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #181818;
+    flex-wrap: wrap;
+}
+
+header{
+    margin-top: 50px;
+    color: ivory;
+    font-size: xx-large;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: #101010;
+    border: black solid 3px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 300px 0px 300px;
+    color: ivory;
+    font-size: large;
+}
+
+/* special stuff */
+
+/* variables */
+:root{
+    --clrFirst: #C60C30;
+    --clrSecond: #702963;
+    --clrThird: #00308F;
+}
+
+/* layered shadows */
+.pageTitle{
+    text-shadow:
+        2px 2px 2px var(--clrFirst),
+        4px 4px 4px var(--clrSecond),
+        6px 6px 6px var(--clrThird);
+}
+
+/* multiple lines */
+hr{
+    --size: 4px;
+
+    border: 0;
+    border-radius: 1000px;
+    height: var(--size);
+    background: ivory;
+    box-shadow:
+        0px calc(var(--size) * 2) 0px var(--clrFirst),
+        0px calc(var(--size) * 4) 0px var(--clrSecond),
+        0px calc(var(--size) * 6) 0px var(--clrThird);
+}
+
+/* fancy links */
+a{
+    color: 	#C3B1E1;
+}
+
+.fancyLink1{
+    text-decoration: none;
+    background-image: linear-gradient(90deg, red,blue);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left 1.25em;
+    padding-block: 0.15em;
+    transition: background-size 500ms;
+}
+
+.fancyLink1:hover{
+    background-size: 100%;
+}
